@@ -1,7 +1,5 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Owner
- * Date: 5/28/2018
- * Time: 4:38 PM
- */
+<?php if ( have_posts()) : ?>                        <!--Retrieve dynamic content from post-->
+	<?php while ( have_posts()) : the_post(); ?>
+		<?php the_content(); ?>
+	<?php endwhile; ?>
+<?php endif; ?>
