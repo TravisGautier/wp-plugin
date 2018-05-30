@@ -13,7 +13,7 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-.jumbotron{
+.gradient-bg{
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4e391+0,61c419+50,b4e391+100;Green+3D */
     background: #b4e391; /* Old browsers */
     background: -moz-linear-gradient(top, #b4e391 0%, #61c419 50%, #b4e391 100%); /* FF3.6-15 */
@@ -21,4 +21,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
     background: linear-gradient(to bottom, #b4e391 0%,#61c419 50%,#b4e391 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e391', endColorstr='#b4e391',GradientType=0 ); /* IE6-9 */
     color:white;
+}
+
+.main-custom-nav {
+    border-radius: 0;
+}
+.main-custom-nav a{
+    color: white;
+}
+.main-custom-nav .navbar-nav > li > a:hover,
+.main-custom-nav .navbar-nav > li > a:focus{
+    background-color: transparent;
+    color: #f3f3f3;
+}
+
+.margin-neg-20{
+    margin-top:-20px;
 }

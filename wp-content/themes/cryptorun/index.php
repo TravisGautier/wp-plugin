@@ -8,8 +8,8 @@
 	    <?php wp_head(); ?>                                      <!--Important function for integration-->
     </head>
     <body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
+    <nav class="navbar gradient-bg main-custom-nav">
+        <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
@@ -22,12 +22,12 @@
             <div class="collapse navbar-collapse" id="bs=example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>   
+                    <li><a href="#">Link</a></li>
                 </ul>
             </div><!--.collapse navbar-collapse-->
         </div><!--.container-fluid-->
     </nav>
-        <div class="jumbotron">                                  <!--Jumbotron-->
+        <div class="jumbotron gradient-bg margin-neg-20">                                  <!--Jumbotron-->
             <div class="container text-center">
                  <h1>Welcome To Our Custom  Site</h1>
             </div>
