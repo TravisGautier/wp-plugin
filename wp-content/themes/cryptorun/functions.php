@@ -1,5 +1,5 @@
 <?php
-function enqueue_cryptorun_styles() {
+function enqueue_cryptorun_styles() {           //loading in style sheets
 	wp_enqueue_style("bootstrap", "//stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css");
 	wp_enqueue_style("cryptorun-style", get_stylesheet_uri());
 }
