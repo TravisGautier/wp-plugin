@@ -14,13 +14,14 @@
  * @since 1.0
  * @version 1.0
  */
-
-get_header(); ?>
+?>
+<?php get_header(); ?>
     <div class="jumbotron gradient-bg margin-neg-20">                                  <!--Jumbotron-->
         <div class="container text-center">
              <h1>Welcome To Our Custom  Site</h1>
         </div>
     </div><!--.jumbotron-->
+
     <div class="container">
         <?php if ( have_posts()) : ?>                        <!--Retrieve dynamic content from post-->
             <?php while ( have_posts()) : the_post(); ?>     <!--While there are posts, go through each post-->
@@ -28,5 +29,7 @@ get_header(); ?>
                 <?php the_content(); ?>                      <!--Retrieve the title and content of the post-->
             <?php endwhile; ?>
         <?php endif; ?>
+
+        <?php get_sidebar(); ?>
     </div><!--.container-->
 <?php get_footer();?>
