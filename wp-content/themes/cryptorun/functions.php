@@ -11,4 +11,17 @@ function cryptorun_setup(){
 	add_theme_support( "title-tag");                                  //add theme support for document title tag
 }
 add_action("after_setup_theme", "cryptorun_setup");
+
+function cryptorun_widgets() {                  //register a custom widget
+	register_sidebar( array(
+		'name'          => __( 'Sidebar', 'cryptorun' ),
+		'id'            => 'sidebar-1',
+		'description'   => __( 'Add widgets here to appear in the sidebar', 'cryptorun' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>'
+	) );
+}
+add_action( 'widgets_init', 'cryptorun_widgets' );
 ?>
