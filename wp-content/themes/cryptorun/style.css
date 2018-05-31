@@ -35,6 +35,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
     background-color: transparent;
     color: #f3f3f3;
 }
+.main-custom-nav .icon-bar {
+    color: white;
+    background-color: white;
+}
 
 .margin-neg-20{
     margin-top:-20px;
