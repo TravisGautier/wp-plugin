@@ -14,16 +14,37 @@
  * @since 1.0
  * @version 1.0
  */
+?>
 
-get_header(); ?>
+<?php get_header(); ?>
 
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">                                   <!--left main content bar
 				<?php if ( have_posts()) : ?>                        <!--Retrieve dynamic content from post-->
 					<?php while ( have_posts()) : the_post(); ?>     <!--While there are posts, go through each post-->
-						<?php the_title(); ?>
-						<?php the_content(); ?>                      <!--Retrieve the title and content of the post-->
+                        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                            <h1><?php the_title(); ?></h1>
+                            <p><?php the_date(); ?></p>
+                            <?php the_content(); ?>                      <!--Retrieve the title and content of the post-->
+
+                            <?php                                        //Pagination
+                            wp_link_pages( array(
+                                'before'      => '<div class="page-links"><span class="page-links-title">' . __('Pages: ', 'cryptorun') . '</span>',
+                                'after'       => '</div>',
+                                'link_before' => '<span',
+                                'link_after'  => '</span>',
+                                'pagelink'    => '<span class="screen-reader-text">' . __( 'Page ', 'cryptorun' ) . '</span>%',
+                                'separator'   => '<span class="screen-reader-text">, </span>'
+                            ));
+                            ?>
+                        </div><!--php post_class-->
+
+						<?php
+						if ( comments_open() || get_comments_number() ) {
+							comments_template();
+						}
+						?>
 					<?php endwhile; ?>
 				<?php endif; ?>
 
