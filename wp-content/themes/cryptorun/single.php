@@ -18,13 +18,28 @@
 get_header(); ?>
 
 	<div class="container">
-		<?php if ( have_posts()) : ?>                        <!--Retrieve dynamic content from post-->
-			<?php while ( have_posts()) : the_post(); ?>     <!--While there are posts, go through each post-->
-				<?php the_title(); ?>
-				<?php the_content(); ?>                      <!--Retrieve the title and content of the post-->
-			<?php endwhile; ?>
-		<?php endif; ?>
+		<div class="row">
+			<div class="col-md-8">                                   <!--left main content bar
+				<?php if ( have_posts()) : ?>                        <!--Retrieve dynamic content from post-->
+					<?php while ( have_posts()) : the_post(); ?>     <!--While there are posts, go through each post-->
+						<?php the_title(); ?>
+						<?php the_content(); ?>                      <!--Retrieve the title and content of the post-->
+					<?php endwhile; ?>
+				<?php endif; ?>
 
-		<?php get_sidebar(); ?>
+				<?php                                                //Blog post navigation
+					if (is_singular( 'post')){
+						the_post_navigation( array(
+							'next_text' => 'Next',
+							'prev_text' => 'Previous'
+						));
+					}
+				?>
+			</div><!--.col-md-8-->
+
+			<div class="col-md-4">                                    <!--right sidebar-->
+				<?php get_sidebar(); ?>
+			</div><!--.col-md-4-->
+		</div><!--.row-->
 	</div><!--.container-->
 <?php get_footer();?>
