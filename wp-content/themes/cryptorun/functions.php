@@ -24,4 +24,9 @@ function cryptorun_widgets() {                  //register a custom widget
 	) );
 }
 add_action( 'widgets_init', 'cryptorun_widgets' );
+
+function three_columns( $atts , $content = null ) {
+	return '<div class="col-sm-4">' . $content . '</div>';
+}
+add_shortcode( 'one_third', 'three_columns');
 ?>

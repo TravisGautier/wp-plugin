@@ -13,6 +13,17 @@
  */
 ?>
 
+<footer id="site-footer">
+    <div class="container">
+    <span class="site-title">
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"> <?php bloginfo( 'name' ); ?></a>
+    </span>
+        <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cryptorun' ) ); ?>">
+            <?php printf( __( 'Proudly powered by %s', 'cryptorun' ), 'WordPress' ); ?>
+        </a>
+    </div>
+</footer>
+
 <?php wp_footer(); ?>                                <!--Footer-->
 </body>
 </html>

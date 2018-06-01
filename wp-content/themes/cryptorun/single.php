@@ -20,7 +20,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8">                                   <!--left main content bar
+			<div class="col-md-8">                                   <!--left main content bar-->
 				<?php if ( have_posts()) : ?>                        <!--Retrieve dynamic content from post-->
 					<?php while ( have_posts()) : the_post(); ?>     <!--While there are posts, go through each post-->
 						<?php get_template_part('template-parts/content', 'single'); ?>
